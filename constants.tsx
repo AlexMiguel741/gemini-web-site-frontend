@@ -2,8 +2,8 @@
 import { Apartment, SiteConfig, StoryContent, HeroContent, Translations } from './types';
 
 /**
- * 🛠️ SITE CONFIGURATION
- * Manage your global business info here
+ * 🛠️ CONFIGURAZIONE SITO
+ * Gestisci qui i tuoi contatti e l'identità del brand
  */
 export const SITE_CONFIG: SiteConfig = {
   name: 'Laveno Shores',
@@ -18,8 +18,7 @@ export const SITE_CONFIG: SiteConfig = {
 };
 
 /**
- * 🏠 HOME PAGE CONTENT
- * Everything you see on the main landing page
+ * 🏠 CONTENUTO HOME PAGE (HERO)
  */
 export const HERO_SECTION: HeroContent = {
   subtitle: { it: 'Esperienza Lago Maggiore', en: 'Experience Lake Maggiore', de: 'Erleben Sie den Lago Maggiore' },
@@ -34,8 +33,7 @@ export const HERO_SECTION: HeroContent = {
 };
 
 /**
- * 📚 TRANSLATIONS / UI LABELS
- * Common labels used across the site
+ * 📚 TRADUZIONI UI / ETICHETTE
  */
 export const UI_LABELS: Translations = {
   nav_residences: { it: 'Residenze', en: 'Residences', de: 'Residenzen' },
@@ -51,7 +49,7 @@ export const UI_LABELS: Translations = {
   amenities_title: { it: 'Servizi Inclusi', en: 'Included Amenities', de: 'Inklusive Leistungen' },
   availability_title: { it: 'Disponibilità', en: 'Availability', de: 'Verfügbarkeit' },
   neighborhood_title: { it: 'Il Quartiere', en: 'The Neighborhood', de: 'Die Nachbarschaft' },
-  direct_only: { it: 'Solo Diretto', en: 'Direct Only', de: 'Nur Direkt' },
+  direct_only: { it: 'Solo Diretto', en: 'Direct Only', de: 'Nur Diretto' },
   best_rate: { it: 'Miglior Tariffa Garantita', en: 'Verified Best Rate', de: 'Garantierter Bestpreis' },
   save_msg: { it: 'Risparmia fino al 15% rispetto ai portali. Nessun costo di servizio nascosto.', en: 'Save up to 15% compared to major platforms. No hidden service fees.', de: 'Sparen Sie bis zu 15% gegenüber Portalen. Keine versteckten Gebühren.' },
   whatsapp_resp: { it: 'Risposta rapida WhatsApp', en: 'Fast WhatsApp Response', de: 'Schnelle WhatsApp Antwort' },
@@ -61,56 +59,48 @@ export const UI_LABELS: Translations = {
   host_online: { it: 'è online', en: 'is Responsive', de: 'ist erreichbar' },
   back: { it: 'Indietro', en: 'Back', de: 'Zurück' },
   sync_live: { it: 'Sincronizzazione Live...', en: 'Synchronizing Live...', de: 'Live-Synchronisierung...' },
-  sync_connected: { it: 'Collegato al Calendario Esterno', en: 'Connected to External Calendar', de: 'Mit externem Kalender verbunden' },
+  sync_connected: { it: 'Collegato al Calendario', en: 'Connected to Calendar', de: 'Mit Kalender verbunden' },
   available: { it: 'Disponibile', en: 'Available', de: 'Verfügbar' },
   booked: { it: 'Prenotato Altrove', en: 'Booked Elsewhere', de: 'Anderswo gebucht' },
   last_sync: { it: 'Ultimo Aggiornamento', en: 'Last Sync', de: 'Letzte Synchronisierung' },
   chat_welcome: { it: "Ciao! Sono la tua host locale. Cerchi un posto dove stare?", en: "Hi! I'm your local host. Looking for a place to stay?", de: "Hallo! Ich bin Ihre Gastgeberin vor Ort. Suchen Sie eine Unterkunft?" },
   contact_human: { it: "L'Ospitalità è Umana.", en: "Hospitality is Human.", de: "Gastfreundschaft ist menschlich." },
-  contact_desc: { it: "Evita i portali. Scrivici direttamente per una tariffa personalizzata.", en: "Avoid the platforms. Message us directly for a personalized rate.", de: "Vermeiden Sie die Portale. Kontaktieren Sie uns direkt für einen persönlichen Preis." }
+  contact_desc: { it: "Evita i portali. Scrivici direttamente per una tariffa personalizzata.", en: "Avoid the platforms. Message us directly for a personalized rate.", de: "Vermeiden Sie die Portale. Kontaktieren Sie uns direttamente." }
 };
 
 /**
- * 📖 HISTORY PAGE
+ * 📖 STORIA E FILOSOFIA
  */
 export const STORY_CONTENT: StoryContent = {
-  title: {
-    it: 'Vita di Lago, Soggiorni di Classe.',
-    en: 'Lake Life, Legacy Stays.',
-    de: 'See-Leben, Erstklassige Aufenthalte.'
-  },
-  quote: {
-    it: '"Non affittiamo solo letti. Offriamo una chiave per il nostro angolo preferito d\'Italia."',
-    en: '"We don\'t rent beds. We offer a key to our favorite corner of Italy."',
-    de: '"Wir vermieten nicht nur Betten. Wir bieten Ihnen einen Schlüssel zu unserem Lieblingseck in Italien."'
-  },
+  title: { it: 'Vita di Lago, Soggiorni di Classe.', en: 'Lake Life, Legacy Stays.', de: 'See-Leben, Erstklassige Aufenthalte.' },
+  quote: { it: '"Offriamo una chiave per il nostro angolo preferito d\'Italia."', en: '"We offer a key to our favorite corner of Italy."', de: '"Wir bieten einen Schlüssel zu unserem Lieblingseck."' },
   paragraphs: {
     it: [
-      'Laveno Shores è nata dalla passione per il restauro e la bellezza tranquilla della sponda lombarda del Lago Maggiore. Quella che era iniziata come una singola casa in pietra a Mombello è diventata una collezione curata di quattro residenze.',
-      'Come attività a conduzione familiare, siamo orgogliosi di essere presenti per i nostri ospiti. Dalla sincronizzazione automatica dei calendari al pacchetto di benvenuto personale nella vostra cucina: gestiamo tutto noi personalmente.'
+      'Laveno Shores è nata dalla passione per il restauro e la bellezza tranquilla del Lago Maggiore.',
+      'Siamo orgogliosi di essere presenti per i nostri ospiti personalmente.'
     ],
     en: [
-      'Laveno Shores was born from a passion for restoration and the quiet beauty of the Lombardy side of Lake Maggiore. What started as a single stone house in Mombello has grown into a curated collection of four residences.',
-      'As a family-run business, we pride ourselves on being there for our guests. From the ical synchronization that ensures a smooth booking to the personal welcome pack in your kitchen—we handle everything personally.'
+      'Laveno Shores was born from a passion for restoration and the quiet beauty of Lake Maggiore.',
+      'We pride ourselves on being there for our guests personally.'
     ],
     de: [
-      'Laveno Shores entstand aus der Leidenschaft für die Restaurierung und die stille Schönheit der lombardischen Seite del Lago Maggiore. Was als einzelnes Steinhaus in Mombello begann, hat sich zu einer kuratierten Kollektion von vier Residenzen entwickelt.',
-      'Als Familienunternehmen sind wir stolz darauf, für unsere Gäste da zu sein. Von der iCal-Synchronisation bis hin zum persönlichen Willkommenspaket in Ihrer Küche – wir kümmern uns persönlich um alles.'
+      'Laveno Shores entstand aus der Leidenschaft für die Restaurierung am Lago Maggiore.',
+      'Wir sind stolz darauf, persönlich für unsere Gäste da zu sein.'
     ]
   },
   image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=1200'
 };
 
 /**
- * 🏨 APARTMENTS DATA
+ * 🏨 APPARTAMENTI
  */
 export const APARTMENTS: Apartment[] = [
   {
     id: 'vista-lago-suite',
     name: { it: 'Vista Lago Suite', en: 'Vista Lago Suite', de: 'See-Panorama Suite' },
-    tagline: { it: 'Caffè mattutino con vista sul Golfo Borromeo', en: 'Morning coffee with a view of the Borromean Gulf', de: 'Morgendlicher Kaffee mit Blick auf den Borromäischen Golf' },
+    tagline: { it: 'Caffè mattutino sul Golfo', en: 'Morning coffee on the Gulf', de: 'Morgendlicher Kaffee' },
     location: 'Piazza Fontana, Laveno',
-    price: 'From €125/night',
+    price: '€125/night',
     bedrooms: 1,
     bathrooms: 1,
     sqft: 55,
@@ -122,23 +112,19 @@ export const APARTMENTS: Apartment[] = [
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&q=80&w=1200'
     ],
-    description: {
-      it: 'Una suite luminosa e ariosa situata direttamente sul lungolago di Laveno. Il punto forte è il balcone privato che si affaccia sulle acque del Lago Maggiore.',
-      en: 'A bright and airy second-floor suite situated directly on the Laveno promenade. The highlight is the private balcony overlooking the shimmering waters of Lake Maggiore.',
-      de: 'Eine helle und luftige Suite im zweiten Stock direkt an der Promenade von Laveno. Das Highlight ist der private Balkon mit Blick auf das glitzernde Wasser des Lago Maggiore.'
-    },
+    description: { it: 'Suite lussuosa con balcone privato.', en: 'Luxury suite with private balcony.', de: 'Luxus-Suite mit privatem Balkon.' },
     amenities: {
-      it: ['Balcone Vista Lago', 'Nespresso Bar', 'WiFi Alta Velocità', 'Aria Condizionata', 'Letto King Size', 'Tende Oscuranti'],
-      en: ['Lake-View Balcony', 'Nespresso Coffee Bar', 'High-Speed WiFi', 'Air Conditioning', 'King Size Bed', 'Blackout Curtains'],
-      de: ['Balkon mit Seeblick', 'Nespresso-Kaffeebar', 'Highspeed-WLAN', 'Klimaanlage', 'Kingsize-Bett', 'Verdunkelungsvorhänge']
+      it: ['Balcone Vista Lago', 'WiFi Alta Velocità', 'Aria Condizionata'],
+      en: ['Lake-View Balcony', 'High-Speed WiFi', 'Air Conditioning'],
+      de: ['Balkon mit Seeblick', 'Highspeed-WLAN', 'Klimaanlage']
     }
   },
   {
     id: 'borghetto-mombello',
     name: { it: 'Il Borghetto', en: 'Il Borghetto', de: 'Das kleine Dorf' },
-    tagline: { it: 'Lusso silenzioso in un borgo storico di pietra', en: 'Quiet luxury in a historic stone hamlet', de: 'Ruhiger Luxus in einem historischen Steindorf' },
+    tagline: { it: 'Lusso storico in pietra', en: 'Historic stone luxury', de: 'Historischer Steinluxus' },
     location: 'Mombello Antico',
-    price: 'From €98/night',
+    price: '€98/night',
     bedrooms: 2,
     bathrooms: 1,
     sqft: 75,
@@ -150,23 +136,19 @@ export const APARTMENTS: Apartment[] = [
       'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1600607687940-c52af046397c?auto=format&fit=crop&q=80&w=1200'
     ],
-    description: {
-      it: 'Nascosto tra le strette vie della vecchia Mombello, questo appartamento ristrutturato conserva le pareti in pietra originali del XVIII secolo.',
-      en: 'Tucked away in the charming narrow streets of old Mombello, this renovated apartment preserves the original 18th-century stone walls.',
-      de: 'Eingebettet in die charmanten engen Gassen des alten Mombello, bewahrt diese renovierte Wohnung die originalen Steinmauern aus dem 18. Jahrhundert.'
-    },
+    description: { it: 'Incantevole appartamento in pietra del XVIII secolo.', en: 'Charming 18th-century stone apartment.', de: 'Charmante Steinwohnung aus dem 18. Jhd.' },
     amenities: {
-      it: ['Pareti in Pietra', 'Cortile Privato', 'Cucina Completa', 'Self Check-in', 'Mobili d\'Antiquariato', 'Biancheria Bio'],
-      en: ['Exposed Stone Walls', 'Secluded Courtyard', 'Full Kitchen', 'Self Check-in', 'Antique Furniture', 'Organic Linens'],
-      de: ['Sichtbare Steinwände', 'Abgeschiedener Innenhof', 'Voll ausgestattete Küche', 'Self-Check-in', 'Antiquitäten', 'Bio-Bettwäsche']
+      it: ['Pareti in Pietra', 'Cortile Privato', 'Self Check-in'],
+      en: ['Exposed Stone Walls', 'Secluded Courtyard', 'Self Check-in'],
+      de: ['Steinwände', 'Innenhof', 'Self Check-in']
     }
   },
   {
     id: 'cableway-loft',
     name: { it: 'Sasso del Ferro Loft', en: 'Sasso del Ferro Loft', de: 'Berg-Loft Sasso' },
-    tagline: { it: 'Design moderno ai piedi della montagna', en: 'Modern design at the foot of the mountain', de: 'Modernes Design am Fuße des Berges' },
+    tagline: { it: 'Design moderno montano', en: 'Modern mountain design', de: 'Modernes Bergdesign' },
     location: 'Via per Casere, Laveno',
-    price: 'From €145/night',
+    price: '€145/night',
     bedrooms: 2,
     bathrooms: 2,
     sqft: 90,
@@ -178,23 +160,19 @@ export const APARTMENTS: Apartment[] = [
       'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=80&w=1200'
     ],
-    description: {
-      it: 'Un loft contemporaneo situato a soli 200 metri dalla famosa funivia di Laveno.',
-      en: 'A contemporary loft located just 200 meters from the famous Laveno bucket-cable car. High ceilings and large windows.',
-      de: 'Ein zeitgemäßes Loft, nur 200 Meter von der berühmten Laveno-Seilbahn entfernt.'
-    },
+    description: { it: 'Loft contemporaneo vicino alla funivia.', en: 'Contemporary loft near the cableway.', de: 'Modernes Loft nahe der Seilbahn.' },
     amenities: {
-      it: ['Terrazza Vista Monte', 'Area Lavoro', 'Parcheggio Sotterraneo', 'Lavanderia', 'Smart TV', 'Doccia a Pioggia'],
-      en: ['Mountain View Terrace', 'Dedicated Workspace', 'Underground Parking', 'Laundry Facilities', 'Smart TV', 'Rain Shower'],
-      de: ['Terrasse mit Bergblick', 'Arbeitsbereich', 'Tiefgarage', 'Waschküche', 'Smart-TV', 'Regendusche']
+      it: ['Vista Monte', 'Parcheggio Sotterraneo', 'Smart TV'],
+      en: ['Mountain View', 'Underground Parking', 'Smart TV'],
+      de: ['Bergblick', 'Tiefgarage', 'Smart TV']
     }
   },
   {
     id: 'garden-hideaway',
     name: { it: 'The MIDeC Garden', en: 'The MIDeC Garden', de: 'MIDeC Garten-Suite' },
-    tagline: { it: 'Un’oasi lussureggiante vicino al Museo della Ceramica', en: 'A lush oasis near the Ceramics Museum', de: 'Eine üppige Oase in der Nähe des Keramikmuseums' },
+    tagline: { it: 'Oasi lussureggiante', en: 'Lush oasis', de: 'Grüne Oase' },
     location: 'Cerro di Laveno',
-    price: 'From €115/night',
+    price: '€115/night',
     bedrooms: 1,
     bathrooms: 1,
     sqft: 60,
@@ -204,17 +182,13 @@ export const APARTMENTS: Apartment[] = [
       'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1585128719715-46776b56a0d1?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&get=80&w=1200'
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=1200'
     ],
-    description: {
-      it: 'Questo rifugio al piano terra dispone di un giardino privato di 40mq.',
-      en: 'A ground-floor sanctuary featuring a 40m² private garden. A quiet corner for alfresco dining.',
-      de: 'Dieser Rückzugsort im Erdgeschoss bietet einen 40 m² großen privaten Garten.'
-    },
+    description: { it: 'Giardino privato di 40mq.', en: '40sqm private garden.', de: '40qm Privatgarten.' },
     amenities: {
-      it: ['Giardino Privato', 'Area Pranzo Esterna', 'Bici Gratuite', 'Quartiere Silenzioso', 'Lettini Prendisole', 'Amaca'],
-      en: ['Private Garden', 'Outdoor Dining Set', 'Complimentary Bikes', 'Quiet Neighborhood', 'Sun Loungers', 'Hammock'],
-      de: ['Privater Garten', 'Außen-Essbereich', 'Kostenlose Fahrräder', 'Ruhige Lage', 'Sonnenliegen', 'Hängematte']
+      it: ['Giardino Privato', 'Bici Gratuite', 'Amaca'],
+      en: ['Private Garden', 'Free Bikes', 'Hammock'],
+      de: ['Privatgarten', 'Gratis Fahrräder', 'Hängematte']
     }
   }
 ];

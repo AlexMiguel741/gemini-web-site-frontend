@@ -3,8 +3,6 @@ import { GoogleGenAI } from "@google/genai";
 import { APARTMENTS, SITE_CONFIG } from "../constants";
 import { Language } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 const getSystemInstruction = (lang: Language) => `
 You are '${SITE_CONFIG.hostName}', the friendly local host of ${SITE_CONFIG.name}. 
 You manage 4 boutique apartments in Laveno Mombello, on Lake Maggiore.
@@ -17,13 +15,16 @@ You MUST respond to the guest in their preferred language (${lang}).
 
 Your goal:
 - Help guests find the right apartment.
-- Share local tips about Laveno Mombello (Bucket Cable Car, Ferry, Ceramics museum).
+- Share local tips about Laveno Mombello.
 - Explain that we handle bookings personally via WhatsApp (${SITE_CONFIG.whatsapp}) or Email (${SITE_CONFIG.email}).
 - Tone: Warm, welcoming, professional Italian hospitality.
 `;
 
 export const getConciergeResponse = async (userMessage: string, history: { role: 'user' | 'model', content: string }[], lang: Language) => {
   try {
+    // Instantiate ONLY when needed to ensure API key is available
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
     const chat = ai.chats.create({
       model: 'gemini-3-flash-preview',
       config: {
