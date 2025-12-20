@@ -114,6 +114,15 @@ const App: React.FC = () => {
 
   const selectedApartment = APARTMENTS.find(a => a.id === selectedAptId);
 
+  const formatPriceFull = (price: number) => {
+    const formatter = new Intl.NumberFormat(lang === 'it' ? 'it-IT' : lang === 'de' ? 'de-DE' : 'en-GB', {
+      style: 'currency',
+      currency: 'EUR',
+      maximumFractionDigits: 0,
+    });
+    return formatter.format(price);
+  };
+
   const navigateTo = (newView: View, id?: string, anchor?: string) => {
     setView(newView);
     setSelectedAptId(id || null);
@@ -164,7 +173,6 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[90] bg-white pt-32 px-6 flex flex-col gap-8 animate-in fade-in slide-in-from-top-4 duration-300 md:hidden">
           <button onClick={() => navigateTo('home', undefined, 'stays')} className="text-2xl font-bold text-slate-900">{UI_LABELS.nav_residences[lang]}</button>
@@ -237,7 +245,6 @@ const App: React.FC = () => {
                    {UI_LABELS.back[lang]}
                 </button>
                 
-                {/* Responsive Image Grid without fixed heights to avoid collapse */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
                   <div className="md:col-span-8 overflow-hidden rounded-3xl shadow-xl aspect-video md:aspect-auto">
                     <SmartImage src={selectedApartment.images[0]} alt={selectedApartment.name[lang]} className="w-full h-full object-cover min-h-[300px]" />
@@ -291,7 +298,6 @@ const App: React.FC = () => {
 
                 <div className="space-y-6">
                    <h3 className="text-slate-900 font-bold text-2xl">{UI_LABELS.neighborhood_title[lang]}</h3>
-                   {/* Explicit height and block display for Google Maps container */}
                    <div className="rounded-3xl overflow-hidden border-8 border-slate-50 shadow-inner w-full bg-slate-100 block" style={{ minHeight: '400px', height: 'auto', position: 'relative' }}>
                       {selectedApartment.googleMapsEmbedUrl ? (
                         <iframe 
@@ -315,7 +321,9 @@ const App: React.FC = () => {
                 <div className="sticky top-32 p-8 bg-slate-900 text-white rounded-[2rem] shadow-2xl space-y-8">
                   <div className="space-y-2">
                     <span className="text-[10px] uppercase font-bold text-blue-400 tracking-widest">{UI_LABELS.direct_only[lang]}</span>
-                    <p className="text-4xl sm:text-5xl font-bold tracking-tighter">{selectedApartment.price}</p>
+                    <p className="text-4xl sm:text-5xl font-bold tracking-tighter">
+                      {UI_LABELS.price_from[lang]} {formatPriceFull(selectedApartment.price)}
+                    </p>
                     <div className="inline-block bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest border border-blue-500/20">{UI_LABELS.best_rate[lang]}</div>
                   </div>
                   <p className="text-xs opacity-60 leading-relaxed">{UI_LABELS.save_msg[lang]}</p>

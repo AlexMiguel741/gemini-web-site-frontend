@@ -14,6 +14,16 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({ apartment, lang, onSelect
     e.currentTarget.src = 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=800';
   };
 
+  // Funzione per formattare il prezzo numerico in Euro localizzati
+  const formatPrice = (price: number) => {
+    const formatter = new Intl.NumberFormat(lang === 'it' ? 'it-IT' : lang === 'de' ? 'de-DE' : 'en-GB', {
+      style: 'currency',
+      currency: 'EUR',
+      maximumFractionDigits: 0,
+    });
+    return `${UI_LABELS.price_from[lang]} ${formatter.format(price)} ${UI_LABELS.price_night[lang]}`;
+  };
+
   return (
     <div 
       className="group bg-white rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl border border-slate-50 flex flex-col active:scale-[0.98] md:active:scale-100"
@@ -29,7 +39,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({ apartment, lang, onSelect
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="absolute top-4 left-4 bg-white/95 backdrop-blur px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-900 shadow-xl border border-slate-100">
-          {apartment.price}
+          {formatPrice(apartment.price)}
         </div>
       </div>
 

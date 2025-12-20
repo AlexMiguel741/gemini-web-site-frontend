@@ -19,7 +19,6 @@ export interface SiteConfig {
   whatsapp: string;
   email: string;
   locationLabel: LocalizedString;
-  // Added to resolve type error when defining SITE_CONFIG and accessing it in App.tsx
   homeMapEmbedUrl: string;
 }
 
@@ -43,7 +42,7 @@ export interface Apartment {
   name: LocalizedString;
   tagline: LocalizedString;
   description: LocalizedString;
-  price: string; 
+  price: number; // Modificato in numero per facilità di aggiornamento
   bedrooms: number;
   bathrooms: number;
   sqft: number;
