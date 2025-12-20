@@ -47,7 +47,7 @@ export const APARTMENTS: Apartment[] = [
       './images/azure/foto_letto.png'
     ],
     description: { 
-      it: 'Situato nel cuore pulsante di Laveno, questo appartamento incanta con i suoi colori mediterranei. La camera da letto principale accoglie gli ospiti con un suggestivo richiamo artistico classico, mentre la cucina moderna offre ogni comfort.', 
+      it: "A 26 km da Villa Panza a Laveno, Il Blu di Laveno prevede un alloggio con vista sulla montagna, WiFi gratuito e parcheggio privato gratuito.\n\nLa struttura presenta la vista sul giardino e si trova a 38 km da Stazione Ferroviaria di Lugano e 40 km da Centro Esposizioni di Lugano.\n\nQuesto appartamento comprende 1 camera da letto, un soggiorno, una cucina con utensili, frigorifero e macchina da caffè, e 1 bagno con bidet e doccia.\n\nPresso questo appartamento troverete asciugamani e lenzuola in dotazione.\n\nAeroporto di Milano Malpensa si trova a 39 km dalla struttura.", 
       en: 'Located in the vibrant heart of Laveno, this apartment enchants with its Mediterranean colors. The main bedroom welcomes guests with a suggestive classic artistic touch, while the modern kitchen offers every comfort.', 
       de: 'Im pulsierenden Herzen von Laveno gelegen, besticht dieses Apartment durch seine mediterranen Farben. Das Hauptschlafzimmer empfängt die Gäste con un suggestivo richiamo artistico classico.' 
     },
@@ -126,7 +126,7 @@ export const UI_LABELS: Translations = {
   save_msg: { it: 'Prenotando qui risparmi il costo del portale.', en: 'By booking here you save the service fees.', de: 'Hier buchen und Servicegebühren sparen.' },
   whatsapp_resp: { it: 'Risposta Rapida', en: 'Quick Reply', de: 'Schnelle Antwort' },
   concierge_service: { it: 'Assistenza Personalizzata', en: 'Personal Assistance', de: 'Persönliche Assistenz' },
-  cta_btn: { it: 'Verifica con Elena', en: 'Check with Elena', de: 'Anfrage bei Elena' },
+  cta_btn: { it: 'Verifica con Elsa', en: 'Check with Elsa', de: 'Anfrage bei Elsa' },
   host_status: { it: 'Host Professionista', en: 'Pro Host', de: 'Profi-Gastgeber' },
   host_online: { it: 'disponibile', en: 'online', de: 'erreichbar' },
   back: { it: 'Indietro', en: 'Back', de: 'Zurück' },
@@ -135,7 +135,7 @@ export const UI_LABELS: Translations = {
   available: { it: 'Libero', en: 'Available', de: 'Frei' },
   booked: { it: 'Occupato', en: 'Booked', de: 'Belegt' },
   last_sync: { it: 'Aggiornato', en: 'Updated', de: 'Aktualisiert' },
-  chat_welcome: { it: "Benvenuti al Blu di Laveno! Sono Elena, il vostro concierge. Come posso aiutarvi?", en: "Welcome to Il Blu di Laveno! I'm Elena, your concierge. How can I help you today?", de: "Willkommen im Il Blu di Laveno! Ich bin Elena. Wie kann ich Ihnen helfen?" },
+  chat_welcome: { it: "Benvenuti al Blu di Laveno! Sono Elsa, il vostro concierge. Come posso aiutarvi?", en: "Welcome to Il Blu di Laveno! I'm Elsa, your concierge. How can I help you today?", de: "Willkommen im Il Blu di Laveno! Ich bin Elsa. Wie kann ich Ihnen helfen?" },
   contact_human: { it: "Parla con Elsa", en: "Talk to Elsa", de: "Kontakt con Elsa" },
   contact_desc: { it: "Per prenotazioni dirette, gruppi o soggiorni lunghi, contattami direttamente su WhatsApp.", en: "For direct bookings, groups, or long stays, contact me directly via WhatsApp.", de: "Für Direktbuchungen, Gruppen oder Langzeitaufenthalte kontaktieren Sie mich direttamente per WhatsApp." }
 };
