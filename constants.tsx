@@ -36,7 +36,7 @@ export const APARTMENTS: Apartment[] = [
     bedrooms: 1,
     bathrooms: 1,
     sqft: 65,
-    icalUrl: '',
+    icalUrl: 'https://ical.booking.com/v1/export/t/1864d3df-c71e-48e7-b21a-5e788ae462eb.ics',
     googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.758215875175!2d8.615724075419156!3d45.9161437031722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4785d8fbbea25a69%3A0x38d99c7f4765ccf0!2sVia%20Professor%20Monteggia%2C%208%2C%2021014%20Laveno-Mombello%20VA!5e0!3m2!1sit!2sit!4v1766249767238!5m2!1sit!2sit',
     images: [
       '/images/azure/foto_sala_1.png',
@@ -82,16 +82,29 @@ export const APARTMENTS: Apartment[] = [
   },
   {
     id: 'cobalt-family-home',
-    name: { it: 'Cobalt Family Home', en: 'Cobalt Family Home', de: 'Cobalt Family Home' },
-    tagline: { it: 'Spazio per tutta la famiglia', en: 'Space for the whole family', de: 'Platz für die ganze Familie' },
-    location: 'Zona Stazione',
-    price: 140,
-    bedrooms: 2,
-    bathrooms: 2,
-    sqft: 90,
-    images: ['./img/cobalt/01.jpg'],
-    description: { it: 'Ideale per famiglie.', en: 'Ideal for families.', de: 'Ideal für Familien.' },
-    amenities: { it: ['2 Bagni'], en: ['2 Bathrooms'], de: ['2 Badezimmer'] }
+    name: { it: 'Cittiglio Le Cascate', en: 'Cobalt Family Home', de: 'Cobalt Family Home' },
+    tagline: { it: 'Nel pieno centro storico di Cittiglio', en: 'Space for the whole family', de: 'Platz für die ganze Familie' },
+    location: 'Zona borgo storico Cittiglio',
+    price: 90,
+    bedrooms: 1,
+    bathrooms: 1,
+    sqft: 45,
+    icalUrl: '',
+    googleMapsEmbedUrl:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11106.469538628786!2d8.642607051634423!3d45.898964948040216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4785d818b6619a69%3A0xbe185904dcfa784!2sVia%20Alpi%2C%209%2C%2021033%20Cittiglio%20VA!5e0!3m2!1sit!2sit!4v1766334152319!5m2!1sit!2sit',
+    images: [ '/images/cobalt/cucina 1.png',
+              '/images/cobalt/cucina2.png',
+              '/images/cobalt/sala.png',
+              '/images/cobalt/porta.png',
+              '/images/cobalt/Camera da letto.png',
+              '/images/cobalt/bagno1.png',
+              '/images/cobalt/bagno2.png'
+            ],
+    description: { it: 'Ubicato a Cittiglio, a 20 km da Villa Panza, 33 km da Stazione Ferroviaria di Lugano e 35 km da Monastero di Torba, Appartamento Le Cascate 1° Piano è un alloggio che propone balcone e WiFi gratuito.\n\n Questo appartamento è a 35 km da Centro Esposizioni di Lugano e 38 km da Stazione Ferroviaria di Mendrisio.\n\n Questo appartamento con 1 camera da letto presenta un soggiorno con TV a schermo piatto, una cucina con utensili e 1 bagno.\n\n Parco Swissminiatur è a 39 km da questo appartamento, mentre Monte San Giorgio si trova a 45 km dalla struttura.\n Aeroporto di Milano Malpensa si trova a 35 km di distanza.'
+      , en: 'Ideal for families.'
+      , de: 'Ideal für Familien.' },
+    amenities: { it: ['Wi-Fi','Balcone','Cucina Completa', 'Parcheggio pubblico', 'Accessori Bambini' ,'Smart TV', 'Asciugamani e Lenzuola'], 
+      en: ['2 Bathrooms'], 
+      de: ['2 Badezimmer'] }
   },
   {
     id: 'navy-garden-retreat',
