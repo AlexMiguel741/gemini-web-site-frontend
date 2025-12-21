@@ -61,7 +61,14 @@ export const fetchAndParseIcal = async (url: string): Promise<BookedRange[]> => 
       }
     }
 
-    const icsText = data.contents;
+    let icsText = data.contents;
+
+    // Handle base64 encoded data URLs (some proxies return data:text/calendar;base64,...)
+    if (icsText.startsWith('data:text/calendar;base64,')) {
+      const base64Data = icsText.split(',')[1];
+      icsText = atob(base64Data);
+      console.log('iCal: Decoded base64 iCal data, new length:', icsText.length);
+    }
     console.log('iCal: Received ICS data, length:', icsText.length);
 
     if (!icsText || icsText.length < 100) {
@@ -99,7 +106,12 @@ const parseIcsString = (icsText: string): BookedRange[] => {
     } else if (cleanLine.startsWith('END:VEVENT')) {
       if (currentStart && currentEnd) {
         ranges.push({ start: currentStart, end: currentEnd });
-        console.log('iCal: Added booking range:', { start: currentStart, end: currentEnd });
+        console.log('iCal: Added booking range:', {
+          start: currentStart.toISOString(),
+          end: currentEnd.toISOString(),
+          startDateString: currentStart.toDateString(),
+          endDateString: currentEnd.toDateString()
+        });
       }
     }
   }
