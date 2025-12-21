@@ -36,7 +36,7 @@ export const APARTMENTS: Apartment[] = [
     bedrooms: 1,
     bathrooms: 1,
     sqft: 65,
-    icalUrl: 'https://ical.booking.com/v1/export/t/436c1829-4803-4b34-a1ef-ad00f8b3a7a9.ics ',
+    icalUrl: 'https://ical.booking.com/v1/export/t/e95dd962-d17c-4d29-8b5b-1e8235c1fe19.ics',
     googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.758215875175!2d8.615724075419156!3d45.9161437031722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4785d8fbbea25a69%3A0x38d99c7f4765ccf0!2sVia%20Professor%20Monteggia%2C%208%2C%2021014%20Laveno-Mombello%20VA!5e0!3m2!1sit!2sit!4v1766249767238!5m2!1sit!2sit',
     images: [
       '/images/azure/foto_sala_1.png',

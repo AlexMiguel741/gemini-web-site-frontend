@@ -79,9 +79,11 @@ export const fetchAndParseIcal = async (url: string): Promise<BookedRange[]> => 
 const parseIcsString = (icsText: string): BookedRange[] => {
   const ranges: BookedRange[] = [];
   const lines = icsText.split(/\r?\n/);
-  
+
   let currentStart: Date | null = null;
   let currentEnd: Date | null = null;
+
+  console.log('iCal: Parsing ICS data, total lines:', lines.length);
 
   for (const line of lines) {
     const cleanLine = line.trim();
@@ -90,15 +92,19 @@ const parseIcsString = (icsText: string): BookedRange[] => {
       currentEnd = null;
     } else if (cleanLine.startsWith('DTSTART')) {
       currentStart = extractDate(cleanLine);
+      console.log('iCal: Found DTSTART:', cleanLine, '-> parsed date:', currentStart);
     } else if (cleanLine.startsWith('DTEND')) {
       currentEnd = extractDate(cleanLine);
+      console.log('iCal: Found DTEND:', cleanLine, '-> parsed date:', currentEnd);
     } else if (cleanLine.startsWith('END:VEVENT')) {
       if (currentStart && currentEnd) {
         ranges.push({ start: currentStart, end: currentEnd });
+        console.log('iCal: Added booking range:', { start: currentStart, end: currentEnd });
       }
     }
   }
-  
+
+  console.log('iCal: Total booking ranges found:', ranges.length);
   return ranges;
 };
 

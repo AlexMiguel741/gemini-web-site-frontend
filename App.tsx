@@ -98,9 +98,14 @@ const AvailabilityCalendar: React.FC<{ apartment: Apartment; lang: Language }> =
 
   useEffect(() => {
     const sync = async () => {
-      if (!apartment.icalUrl) return;
+      if (!apartment.icalUrl) {
+        console.log('Calendar: No iCal URL for apartment:', apartment.id);
+        return;
+      }
+      console.log('Calendar: Starting sync for apartment:', apartment.id, 'URL:', apartment.icalUrl);
       setIsSyncing(true);
       const bookings = await fetchAndParseIcal(apartment.icalUrl);
+      console.log('Calendar: Received bookings:', bookings.length, 'ranges');
       setRealBookings(bookings);
       setIsSyncing(false);
     };
