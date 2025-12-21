@@ -52,7 +52,7 @@ export const APARTMENTS: Apartment[] = [
       de: 'Im pulsierenden Herzen von Laveno gelegen, besticht dieses Apartment durch seine mediterranen Farben. Das Hauptschlafzimmer empfängt die Gäste con un suggestivo richiamo artistico classico.' 
     },
     amenities: {
-      it: ['Wi-Fi Fibra', 'Cucina Completa', 'Climatizzazione', 'Vicinanza Porto', 'Smart TV'],
+      it: ['Wi-Fi', 'Cucina Completa', 'Parcheggio gratuito', 'Accessori Bambini' ,'Smart TV', 'Asciugamani e Lenzuola'],
       en: ['Fiber Wi-Fi', 'Full Kitchen', 'AC', 'Harbor Proximity', 'Smart TV'],
       de: ['Glasfaser-WLAN', 'Vollküche', 'Klimaanlage', 'Hafennähe', 'Smart TV']
     }
@@ -60,7 +60,7 @@ export const APARTMENTS: Apartment[] = [
   {
     id: 'sapphire-studio-loft',
     name: { it: 'Verso il Lago', en: 'Verso il Lago', de: 'Verso il Lago' },
-    tagline: { it: 'Eleganza Compatta Fronte Porto', en: 'Compact Elegance Waterfront', de: 'Kompakte Eleganz am Wasser' },
+    tagline: { it: 'A due passi da Laveno Centro', en: 'Compact Elegance Waterfront', de: 'Kompakte Eleganz am Wasser' },
     location: 'Centro Laveno',
     price: 125,
     bedrooms: 1,
@@ -74,8 +74,11 @@ export const APARTMENTS: Apartment[] = [
              './images/sapphire/foto_letto.JPG',
               './images/sapphire/foto_sala_3.JPG'
     ],
-    description: { it: 'Posizione centrale', en: 'Central position', de: 'Raffiniertes Design per coppie.' },
-    amenities: { it: ['Self Check-in'], en: ['Self Check-in'], de: ['Self Check-in'] }
+    description: { it: 'Verso il Lago si trova a Laveno a 25 km da Villa Panza, 38 km da Stazione Ferroviaria di Lugano e 39 km da Monastero di Torba. La struttura presenta la vista sul giardino e il WiFi gratuito in tutta la struttura\n\nQuesto appartamento con balcone e vista sulla città offre 1 camera da letto, un soggiorno, una TV a schermo piatto, una cucina con frigorifero e piano cottura e 1 bagno con doccia.\n\nPresso questo appartamento troverete asciugamani e lenzuola tra i servizi disponibili.\n\n Centro Esposizioni di Lugano è a 40 km da questo appartamento, mentre Stazione Ferroviaria di Mendrisio si trova a 43 km dalla struttura.', 
+      en: 'Central position', 
+      de: 'Raffiniertes Design per coppie.' },
+    amenities: { it: ['Wi-Fi', 'Cucina Completa', 'Parcheggio pubblico', 'Accessori Bambini' ,'Smart TV', 'Asciugamani e Lenzuola']
+      , en: ['Self Check-in'], de: ['Self Check-in'] }
   },
   {
     id: 'cobalt-family-home',
@@ -110,7 +113,7 @@ export const UI_LABELS: Translations = {
   nav_history: { it: 'Il Concept', en: 'The Concept', de: 'Das Konzept' },
   nav_contact: { it: 'Prenota Ora', en: 'Book Now', de: 'Jetzt Buchen' },
   houses_title: { it: 'Le Nostre Dimore', en: 'Our Residences', de: 'Unsere Residenzen' },
-  houses_subtitle: { it: 'Eleganza e comfort a due passi dal porto.', en: 'Elegance and comfort steps away from the harbor.', de: 'Eleganz und Komfort nur wenige Schritte vom Hafen entfernt.' },
+  houses_subtitle: { it: 'Eleganza e comfort a due passi dal Lago Maggiore', en: 'Elegance and comfort steps away from the harbor.', de: 'Eleganz und Komfort nur wenige Schritte vom Hafen entfernt.' },
   price_from: { it: 'da', en: 'from', de: 'ab' },
   price_night: { it: '/ notte', en: '/ night', de: '/ Nacht' },
   exclusive_label: { it: 'Design Moderno', en: 'Modern Design', de: 'Modernes Design' },
