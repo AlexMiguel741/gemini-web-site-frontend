@@ -159,6 +159,26 @@ const AvailabilityCalendar: React.FC<{ apartment: Apartment; lang: Language }> =
     return isBooked;
   };
 
+  const isDayInPast = (day: number) => {
+    const checkDate = new Date(year, viewDate.getMonth(), day);
+    checkDate.setHours(0, 0, 0, 0);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    return checkDate < today;
+  };
+
+  const isToday = (day: number) => {
+    const checkDate = new Date(year, viewDate.getMonth(), day);
+    checkDate.setHours(0, 0, 0, 0);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    return checkDate.getTime() === today.getTime();
+  };
+
   return (
     <div className="bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 shadow-sm w-full">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
@@ -187,8 +207,27 @@ const AvailabilityCalendar: React.FC<{ apartment: Apartment; lang: Language }> =
         {Array.from({ length: daysInMonth }).map((_, i) => {
           const day = i + 1;
           const booked = isDayBooked(day);
+          const inPast = isDayInPast(day);
+          const today = isToday(day);
+
+          let className = 'aspect-square flex items-center justify-center rounded-lg text-xs font-medium border transition-all ';
+
+          if (inPast) {
+            // Past dates - disabled/unavailable
+            className += 'bg-slate-100 text-slate-300 border-slate-200 cursor-not-allowed';
+          } else if (booked) {
+            // Booked dates
+            className += 'bg-slate-50 text-slate-200 border-transparent';
+          } else if (today) {
+            // Today - highlight it
+            className += 'bg-blue-600 text-white border-blue-700 shadow-md font-bold';
+          } else {
+            // Available future dates
+            className += 'bg-white text-slate-700 border-slate-50 shadow-sm hover:bg-slate-50';
+          }
+
           return (
-            <div key={day} className={`aspect-square flex items-center justify-center rounded-lg text-xs font-medium border transition-all ${booked ? 'bg-slate-50 text-slate-200 border-transparent' : 'bg-white text-slate-700 border-slate-50 shadow-sm'}`}>
+            <div key={day} className={className}>
               {day}
             </div>
           );
