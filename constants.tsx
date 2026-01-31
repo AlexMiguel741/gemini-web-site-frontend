@@ -1,5 +1,6 @@
-
 import { Apartment, SiteConfig, StoryContent, HeroContent, Translations } from './types';
+
+export const CIN_CODES = ["CIN:IT012051B44A79OVIZ", "CIN:IT012087B4L6USBGHE", "CIN:IT012087B4ZRHJNMYA"];
 
 export const SITE_CONFIG: SiteConfig = {
   name: 'Case Vacanze Lago Maggiore',
@@ -128,7 +129,7 @@ export const APARTMENTS: Apartment[] = [
              '/images/navy/foto_letto.png',
              '/images/navy/foto_bagno.png',
              '/images/navy/foto_bagno_2.jpg'],
-    description: { it: 'Appartamento Le Cascate si trova a Cittiglio a 33 km da Stazione Ferroviaria di Lugano, 35 km da Monastero di Torba e 35 km da Centro Esposizioni di Lugano. \nL’alloggio si trova a 20 km da Villa Panza e presenta il WiFi gratuito in tutta la struttura.\n\nQuesto appartamento prevede 1 camera da letto, 1 bagno, lenzuola, asciugamani, una TV a schermo piatto, una zona pranzo, una cucina con utensili e un patio con vista sulla montagna.\nStazione Ferroviaria di Mendrisio è a 38 km da questo appartamento, mentre Parco Swissminiatur si trova a 39 km di distanza. Aeroporto di Milano Malpensa si trova a 35 km dalla struttura.',
+    description: { it: 'Appartamento Le Cascate si trova a Cittiglio a 33 km da Stazione Ferroviaria di Lugano, 35 km da Monastero di Torba e 35 km da Centro Esposizioni di Lugano. \nLalloggio si trova a 20 km da Villa Panza e presenta il WiFi gratuito in tutta la struttura.\n\nQuesto appartamento prevede 1 camera da letto, 1 bagno, lenzuola, asciugamani, una TV a schermo piatto, una zona pranzo, una cucina con utensili e un patio con vista sulla montagna.\nStazione Ferroviaria di Mendrisio è a 38 km da questo appartamento, mentre Parco Swissminiatur si trova a 39 km di distanza. Aeroporto di Milano Malpensa si trova a 35 km dalla struttura.',
        en: 'Le Cascate Apartment is located in Cittiglio, 33 km from Lugano Railway Station, 35 km from Monastero di Torba and 35 km from Lugano Exhibition Center. The accommodation is 20 km from Villa Panza and features free WiFi throughout the property.\n\nThis apartment offers 1 bedroom, 1 bathroom, bed sheets, towels, a flat-screen TV, a dining area, a kitchen with utensils and a patio with mountain views.\n\nMendrisio Railway Station is 38 km from this apartment, while Swissminiatur Park is 39 km away. Milan Malpensa Airport is 35 km from the property.',
        de: 'Das Apartment Le Cascate liegt in Cittiglio, 33 km vom Bahnhof Lugano, 35 km vom Monastero di Torba und 35 km vom Lugano Exhibition Center entfernt. Die Unterkunft ist 20 km von Villa Panza entfernt und bietet kostenloses WLAN im gesamten Gebäude.\n\nDieses Apartment bietet 1 Schlafzimmer, 1 Badezimmer, Bettwäsche, Handtücher, einen Flachbildfernseher, einen Essbereich, eine Küche mit Utensilien und eine Terrasse mit Bergblick.\n\nDer Bahnhof Mendrisio ist 38 km von diesem Apartment entfernt, während der Swissminiatur Park 39 km entfernt ist. Der Flughafen Mailand Malpensa ist 35 km von der Unterkunft entfernt.' },
     amenities: { it: ['Wi-Fi','Giardino','Cucina Completa', 'Parcheggio pubblico', 'Accessori Bambini' ,'Smart TV', 'Asciugamani e Lenzuola'],

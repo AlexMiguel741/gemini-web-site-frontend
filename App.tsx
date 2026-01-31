@@ -5,26 +5,12 @@ import ContactInfo from './components/ContactInfo';
 import { Apartment, Language } from './types';
 import ApartmentCard from './components/ApartmentCard';
 import { fetchAndParseIcal, BookedRange } from './services/icalService';
+import Footer from './components/Footer';
+import SmartImage from './components/SmartImage';
 
 type View = 'home' | 'story' | 'property';
 
-const SmartImage: React.FC<{ src?: string; alt: string; className?: string; onClick?: () => void }> = ({ src, alt, className, onClick }) => {
-  const fallback = 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=1200';
-  const [hasError, setHasError] = useState(false);
 
-  return (
-    <div className={`overflow-hidden bg-slate-100 ${className}`}>
-      <img 
-        src={hasError || !src ? fallback : src} 
-        alt={alt} 
-        className={`w-full h-full object-cover ${onClick ? 'cursor-pointer hover:scale-105 transition-transform duration-700' : ''}`}
-        onError={() => setHasError(true)}
-        loading="lazy"
-        onClick={onClick}
-      />
-    </div>
-  );
-};
 
 const Lightbox: React.FC<{ images: string[]; isOpen: boolean; onClose: () => void; startIndex?: number; lang: Language }> = ({ images, isOpen, onClose, startIndex = 0, lang }) => {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
@@ -210,20 +196,17 @@ const AvailabilityCalendar: React.FC<{ apartment: Apartment; lang: Language }> =
           const inPast = isDayInPast(day);
           const today = isToday(day);
 
-          let className = 'aspect-square flex items-center justify-center rounded-lg text-xs font-medium border transition-all ';
+          let className = 'aspect-square flex items-center justify-center rounded-lg text-xs font-medium ';
 
           if (inPast) {
             // Past dates - disabled/unavailable
-            className += 'bg-slate-100 text-slate-300 border-slate-200 cursor-not-allowed';
+            className += 'bg-slate-100 text-slate-300';
           } else if (booked) {
             // Booked dates
-            className += 'bg-slate-50 text-slate-200 border-transparent';
-          } else if (today) {
-            // Today - highlight it
-            className += 'bg-blue-700 text-white border-blue-800 shadow-md font-bold';
+            className += 'bg-red-500 text-white';
           } else {
-            // Available future dates
-            className += 'bg-white text-slate-700 border-slate-50 shadow-sm hover:bg-slate-50';
+            // Available future dates (including today)
+            className += 'bg-green-500 text-white';
           }
 
           return (
@@ -621,24 +604,7 @@ const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="py-20 border-t border-slate-50 bg-[#fdfdfd] shrink-0">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
-          <img
-            src="/images/logo.png"
-            alt={SITE_CONFIG.name}
-            className="h-20 sm:h-24 w-auto mb-4"
-          />
-          <div className="flex flex-wrap justify-center gap-6 mb-10 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-            <button onClick={() => navigateTo('home')} className="hover:text-slate-900 transition-colors">Home</button>
-            <button onClick={() => navigateTo('story')} className="hover:text-slate-900 transition-colors">{UI_LABELS.nav_history[lang]}</button>
-            <button onClick={() => navigateTo('home', undefined, 'contact')} className="hover:text-slate-900 transition-colors">{UI_LABELS.nav_contact[lang]}</button>
-          </div>
-          <p className="text-slate-300 text-[10px] uppercase font-bold tracking-[0.3em]">
-             © 2024 • {SITE_CONFIG.locationLabel[lang]}
-          </p>
-        </div>
-      </footer>
-
+      <Footer />
     </div>
   );
 };

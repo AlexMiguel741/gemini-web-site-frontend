@@ -127,20 +127,17 @@ const AvailabilityCalendar: React.FC<AvailabilityCalendarProps> = ({ apartment, 
           const inPast = isDayInPast(day);
           const today = isToday(day);
 
-          let className = 'aspect-square flex items-center justify-center rounded-lg text-xs font-medium border transition-all ';
+          let className = 'aspect-square flex items-center justify-center rounded-lg text-xs font-medium ';
 
           if (inPast) {
             // Past dates - disabled/unavailable
-            className += 'bg-slate-100 text-slate-300 border-slate-200 cursor-not-allowed';
+            className += 'bg-slate-100 text-slate-300';
           } else if (booked) {
             // Booked dates
-            className += 'bg-slate-50 text-slate-200 border-transparent';
-          } else if (today) {
-            // Today - highlight it
-            className += 'bg-blue-900 text-white border-black shadow-md font-bold';
+            className += 'bg-red-500 text-white';
           } else {
-            // Available future dates
-            className += 'bg-white text-slate-700 border-slate-50 shadow-sm hover:bg-slate-50';
+            // Available future dates (including today)
+            className += 'bg-green-500 text-white';
           }
 
           return (
